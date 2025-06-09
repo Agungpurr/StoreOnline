@@ -1,11 +1,9 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
-import { UserButton } from "@clerk/nextjs";
-import Image from "next/image";
-import Modal from "@/components/ui/modal";
-import { useStoreModal } from "@/hooks/use-store-modal";
 import { useEffect } from "react";
+
+import { useStoreModal } from "@/hooks/use-store-modal";
+import { UserButton } from "@clerk/nextjs";
 
 const SetupPage = () => {
   const onOpen = useStoreModal((state) => state.onOpen);
@@ -16,7 +14,7 @@ const SetupPage = () => {
       onOpen();
     }
   }, [isOpen, onOpen]);
-  return <div className="p-4">Root Page</div>;
+  return null;
 };
 
 export default SetupPage;
